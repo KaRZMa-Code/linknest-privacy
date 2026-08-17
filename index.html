@@ -30,6 +30,7 @@
     </a>
     <nav class="site-nav" aria-label="Primary">
       <a href="#features">Features</a>
+      <a href="#google-data">Google Drive</a>
       <a href="#privacy">Privacy</a>
       <a href="privacy/">Privacy Policy</a>
     </nav>
@@ -101,14 +102,86 @@
         <li>
           <h3>Optional Google Drive sync</h3>
           <p>
-            Google Drive access: If you enable Google Drive sync, 
-            LinkNest uses your Google Account to back up and restore the LinkNest files created by the app. 
-            LinkNest requests only the drive.file permission, which limits access to files created or used by LinkNest.
-            Off until you turn it on. When enabled, it keeps one backup file in
-            your own Google Drive, and can only see files it created there.
+            Off until you turn it on. When enabled, LinkNest keeps a single
+            backup file of your library in your own Google Drive, so you can
+            restore it or move to another device. See
+            <a href="#google-data">how LinkNest uses Google Drive</a> below.
           </p>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section id="google-data">
+    <div class="shell">
+      <h2>How LinkNest uses Google Drive</h2>
+      <p class="section-lede">
+        LinkNest works fully without a Google Account. Google Drive is used for
+        one optional feature — backing up your link library so you can restore
+        it or move it to another device — and LinkNest asks for access only at
+        the moment you turn that feature on.
+      </p>
+      <dl class="disclosure">
+        <dt>Why LinkNest requests access</dt>
+        <dd>
+          To save and retrieve one backup file containing your LinkNest
+          library — your links, your categories, and your app preferences — in
+          your own Google Drive. That backup is what lets you recover your
+          library after reinstalling, or continue on a second device.
+        </dd>
+
+        <dt>When access is requested</dt>
+        <dd>
+          Only when you open Settings and enable Google Drive sync, and then
+          sign in with the Google Account you choose. Sync is off by default,
+          and every other feature works without signing in. You can sign out at
+          any time.
+        </dd>
+
+        <dt>What LinkNest asks for</dt>
+        <dd>
+          A single permission:
+          <code class="scope">https://www.googleapis.com/auth/drive.file</code>
+          This is the narrowest Drive permission Google offers. It grants access
+          <strong>only to files LinkNest itself creates</strong> — which is all
+          LinkNest needs, since it only ever reads and writes its own backup
+          file. A broader permission would let LinkNest see files that have
+          nothing to do with it, so it does not request one.
+        </dd>
+
+        <dt>What LinkNest does with it</dt>
+        <dd>
+          It uploads its backup file when a sync runs — either when you tap
+          <em>Sync now</em>, or automatically at app start if you have switched
+          automatic sync on — and downloads that same file when you restore or
+          set up another device. Nothing else in your Drive is read, written,
+          or deleted.
+        </dd>
+
+        <dt>What LinkNest cannot see</dt>
+        <dd>
+          Any other file in your Google Drive. Documents, photos, and files
+          created by other apps are outside the requested permission, and
+          LinkNest never asks for, receives, or stores them.
+        </dd>
+
+        <dt>Where the data goes</dt>
+        <dd>
+          Into your own Google Drive account, directly from your device.
+          LinkNest has no server, so your library and your Google data are
+          never sent to KaRZMa Code, never shared with anyone else, never sold,
+          and never used for advertising or analytics.
+        </dd>
+
+        <dt>Limited Use</dt>
+        <dd>
+          LinkNest's use of information received from Google APIs adheres to the
+          <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google
+          API Services User Data Policy</a>, including the Limited Use
+          requirements.
+        </dd>
+      </dl>
+      <a class="button" href="privacy/">Read the Privacy Policy</a>
     </div>
   </section>
 
