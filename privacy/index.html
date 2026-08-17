@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — LinkNest</title>
+<meta name="description" content="How LinkNest handles your data: what is stored on your device, when the app uses the internet, and what optional Google Drive sync can access.">
+<link rel="canonical" href="https://linknest.dev/privacy/">
+<link rel="alternate" hreflang="en" href="https://linknest.dev/privacy/">
+<link rel="alternate" hreflang="ar" href="https://linknest.dev/privacy/ar/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LinkNest">
+<meta property="og:title" content="Privacy Policy — LinkNest">
+<meta property="og:description" content="How LinkNest handles your data: what is stored on your device, when the app uses the internet, and what optional Google Drive sync can access.">
+<meta property="og:url" content="https://linknest.dev/privacy/">
+<meta property="og:image" content="https://linknest.dev/img/og-card.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../img/linknest-icon-192.png">
+<link rel="apple-touch-icon" href="../img/linknest-icon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="../">
+      <img src="../img/linknest-icon-192.png" alt="" width="34" height="34">
+      LinkNest
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page" lang="en">English</a>
+      <a href="ar/" lang="ar">العربية</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="policy">
+  <div class="shell">
+    <h1>LinkNest — Privacy Policy</h1>
+    <p class="meta"><strong>Publisher:</strong> KaRZMa Code<br><strong>Contact:</strong> karzma.code@gmail.com<br><strong>Applies to:</strong> the LinkNest application for Android and Windows<br><strong>Effective date:</strong> <em>August 17, 2026</em><br><strong>Last updated:</strong> <em>August 17, 2026</em></p>
+    <hr>
+    <h2>Summary</h2>
+    <p>LinkNest is an offline-first app for saving and organizing links. Your links live on your own device, in a database only LinkNest uses.</p>
+    <ul>
+    <li><strong>No account is required</strong>, and LinkNest has no server of its own.</li>
+    <li><strong>LinkNest does not collect your information.</strong> The app has no server of its own, and nothing you save is transmitted to KaRZMa Code. There is no analytics, no crash reporting, no advertising, and no tracking identifier of any kind in it. This is separate from the ordinary web requests described below, which go directly to the websites you save — never to us.</li>
+    <li><strong>Nothing is sold or shared</strong>, because none of it ever reaches us.</li>
+    <li>LinkNest connects to the internet in only three situations, all described below, and one of them is entirely optional and off until you turn it on.</li>
+    </ul>
+    <p>The rest of this policy explains exactly what is stored and when the app communicates with anything outside your device.</p>
+    <hr>
+    <h2>1. What LinkNest stores on your device</h2>
+    <p>Everything you create in LinkNest is written to local storage on the device you are using, in a folder belonging to the app rather than among your own files — on Android, the app's private storage; on Windows, LinkNest's own folder under your user profile's application data:</p>
+    <ul>
+    <li><strong>Links</strong> — the web address, the title, an optional description and note, whether it is a favourite, and when it was added, changed, or last opened.</li>
+    <li><strong>Categories</strong> — their names, icons, colours, ordering, nesting, and how recently each was used.</li>
+    <li><strong>Site icons (favicons)</strong> — a small image file downloaded from each website so your list still shows icons when you are offline.</li>
+    <li><strong>Trash</strong> — items you delete are kept until you delete them permanently or empty the Trash.</li>
+    <li><strong>Your preferences</strong> — theme (light or dark), language, sorting and grouping choices, recent search terms, whether App Lock is on and its timeout, and whether the first-run welcome has been dismissed.</li>
+    </ul>
+    <p>This data stays on the device unless you turn on Google Drive backup and sync (section 3).</p>
+    <p><strong>We have no access to any of it.</strong> LinkNest has no backend server, so this data is never transmitted to the publisher.</p>
+    <hr>
+    <h2>2. What LinkNest does *not* do</h2>
+    <ul>
+    <li>No analytics or usage statistics.</li>
+    <li>No crash or error reporting.</li>
+    <li>No advertising, and no advertising identifiers.</li>
+    <li>No device fingerprinting, tracking pixels, or third-party tracking SDKs.</li>
+    <li>No user account, profile, or registration.</li>
+    <li>No sale or sharing of personal information.</li>
+    <li>No location access, contacts access, microphone, or camera.</li>
+    </ul>
+    <p>These are deliberate product decisions, not omissions.</p>
+    <hr>
+    <h2>3. When LinkNest connects to the internet</h2>
+    <p>LinkNest is usable entirely offline. Network requests happen in exactly three situations.</p>
+    <h3>3.1 Reading a link's title and icon</h3>
+    <p>When you save a link — or edit one — LinkNest requests that page from <strong>the website you saved</strong>, in order to read its title and find its icon.</p>
+    <ul>
+    <li>The request goes <strong>directly to that website</strong>, not through us.</li>
+    <li>Like any request from a browser, it reveals your device's <strong>IP address</strong> and the address you requested to that website and its hosting or CDN provider. That is unavoidable for any app that fetches a page, and it is the same information the site would receive if you opened the link yourself.</li>
+    <li>The request identifies the app in its <code>User-Agent</code> header. It carries <strong>no personal information, no account details, and no identifier for you or your device</strong> beyond what any ordinary web request contains.</li>
+    <li>The icon is saved locally so your list works offline. Nothing else from the page is stored.</li>
+    <li>If the request fails or you are offline, the link is saved anyway, without a title or icon.</li>
+    </ul>
+    <h3>3.2 Google Drive backup and sync — optional, off by default</h3>
+    <p>Described in section 4.</p>
+    <h3>3.3 Opening a link</h3>
+    <p>When you open a saved link, LinkNest hands it to your browser or to whichever app your device is set to use. From that point the link is out of LinkNest's hands and the other app's own privacy policy applies.</p>
+    <hr>
+    <h2>4. Google Drive backup and sync (optional)</h2>
+    <p>This feature is <strong>off until you sign in</strong>, and LinkNest is fully functional without it.</p>
+    <p><strong>What it does.</strong> It keeps a single backup file — a snapshot of your links, categories, and preferences — in your own Google Drive, so you can restore it or move it to another device.</p>
+    <p><strong>What LinkNest can access in your Drive.</strong> Sign-in requests only the <code>drive.file</code> scope. This is the narrowest Drive permission Google offers: it grants access <strong>only to files this app itself created</strong>. LinkNest cannot see, read, or list any other file in your Google Drive, and it does not ask to.</p>
+    <p><strong>Where your data goes.</strong> Into your own Google Drive account. The publisher has no access to it. Google's handling of it is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p><strong>What LinkNest keeps about your Google account.</strong></p>
+    <ul>
+    <li><strong>On Android</strong>, the email address of the signed-in account is shown in the app so you can tell which account is connected. It is held in memory for the session and is <strong>not written into the app's own storage</strong>. The sign-in session itself is managed by Google Play services on your device, not by LinkNest.</li>
+    <li><strong>On Windows</strong>, sign-in uses a browser-based consent flow, and the resulting credentials are held <strong>in memory only</strong>. They are discarded when the app closes, which is why Windows asks you to authorize again after a restart. Nothing about your Google account is written to disk by LinkNest.</li>
+    </ul>
+    <p><strong>How to disconnect.</strong> Sign out inside LinkNest at any time. You can also revoke the app's access entirely from your Google Account's <a href="https://myaccount.google.com/permissions">third-party access settings</a>. To remove the backup itself, delete the LinkNest backup file from your Google Drive.</p>
+    <hr>
+    <h2>5. App Lock</h2>
+    <p>If you enable App Lock, LinkNest asks the operating system to confirm your identity — using the fingerprint, face, or device PIN/password you have already set up — before showing your links.</p>
+    <p>The check is performed entirely by Android or Windows. <strong>LinkNest never receives, sees, or stores your biometric data, PIN, or password.</strong> The app only learns whether the system reported success or failure. Nothing about it leaves your device.</p>
+    <p>If your device has no screen lock or biometric enrolled, App Lock disables itself and explains why, rather than locking you out of your own data.</p>
+    <hr>
+    <h2>6. Clipboard and sharing</h2>
+    <ul>
+    <li><strong>Sharing a link to LinkNest</strong> (Android): when you share a link from another app, that link is passed to LinkNest so you can save it. It is used only for that purpose.</li>
+    <li><strong>Reading the clipboard</strong> (Windows): LinkNest reads the clipboard <strong>only at the moment you use the "add from clipboard" action</strong>. It does not monitor or read the clipboard in the background.</li>
+    <li><strong>Copying a link</strong> places that link on your clipboard at your request.</li>
+    </ul>
+    <p>Clipboard content is never transmitted anywhere.</p>
+    <hr>
+    <h2>7. Keeping and deleting your data</h2>
+    <ul>
+    <li><strong>Deleting</strong> a link or category moves it to Trash, where it stays until you remove it permanently or empty the Trash.</li>
+    <li><strong>Permanent deletion</strong> removes the record from the database. Cached site icons that no remaining link uses are deleted at the same time.</li>
+    <li><strong>Restoring from a backup</strong> replaces the entire current library with the contents of that backup. LinkNest warns you before doing this, and it cannot be undone.</li>
+    <li><strong>Uninstalling LinkNest</strong> removes the app's local data on <strong>Android</strong>, where the system deletes app-private storage as part of uninstalling. On <strong>Windows</strong>, uninstalling may leave LinkNest's application-data folder behind — Windows does not guarantee that files an app created are removed with it. To be certain nothing remains, delete LinkNest's folder under your user profile's roaming application data after uninstalling.</li>
+    <li><strong>Your Google Drive backup is not removed by uninstalling.</strong> If you want it gone, delete the LinkNest backup file from your Google Drive, and optionally revoke the app's access from your Google Account settings.</li>
+    </ul>
+    <p>Because there is no server, there is nothing held about you anywhere else to request, correct, or delete. Your data is in your hands: on your device, and — only if you chose to enable it — in your own Google Drive.</p>
+    <hr>
+    <h2>8. Children</h2>
+    <p>LinkNest is a general-purpose utility and is not directed at children. It does not knowingly collect information from anyone, of any age.</p>
+    <hr>
+    <h2>9. Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published at this same address with a new "Last updated" date. Material changes to how the app handles data will also be reflected in the app's release notes.</p>
+    <hr>
+    <h2>10. Contact</h2>
+    <p>Questions about this policy or about privacy in LinkNest:</p>
+    <p><strong>KaRZMa Code</strong> — karzma.code@gmail.com</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p><strong>KaRZMa&nbsp;Code</strong></p>
+    <p><a href="mailto:karzma.code@gmail.com">karzma.code@gmail.com</a></p>
+    <p><a href="../">Home</a></p>
+    <p>&copy; <span data-current-year>2026</span> KaRZMa Code</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

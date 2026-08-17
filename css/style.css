@@ -1,0 +1,381 @@
+/*
+  LinkNest website — one stylesheet for all pages.
+
+  Deliberately plain CSS with no build step: the site is three static pages on
+  GitHub Pages, and anything that needs compiling would be a dependency the
+  site does not otherwise have.
+
+  The palette follows the app's own mark: a near-black ink on a near-white
+  ground, with a single indigo accent. Dark mode is honoured through
+  prefers-color-scheme so the page matches the reader's system rather than
+  forcing a look.
+*/
+
+:root {
+  --ink: #17151c;
+  --ink-soft: #4a4657;
+  --ground: #fbfafd;
+  --surface: #ffffff;
+  --line: #e5e2ec;
+  --accent: #4b3f9e;
+  --accent-ink: #ffffff;
+  --radius: 14px;
+  --measure: 68ch;
+  --shell: 1080px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece7f2;
+    --ink-soft: #b0a9bd;
+    --ground: #101014;
+    --surface: #17171d;
+    --line: #2b2933;
+    --accent: #a99cf5;
+    --accent-ink: #16121f;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Noto Sans Arabic", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* Visible only to keyboard users, and only once focused.
+
+   Hidden by clipping rather than by parking it off-screen at a negative
+   offset: in a right-to-left document the off-screen trick extends the
+   scrollable area in the inline-start direction, which gives the whole page a
+   phantom horizontal scrollbar. Clipping is direction-agnostic and leaves the
+   link fully focusable. */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: 0 0 var(--radius) 0;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  width: auto;
+  height: auto;
+  padding: 10px 16px;
+  overflow: visible;
+  clip-path: none;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.site-header .shell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 14px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 650;
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 22px;
+  font-size: 0.98rem;
+}
+
+.site-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  text-align: center;
+  padding-block: clamp(48px, 9vw, 92px);
+}
+
+.hero img {
+  width: clamp(88px, 16vw, 116px);
+  height: auto;
+  border-radius: 24px;
+  margin-bottom: 26px;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 6vw, 3.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+}
+
+.lede {
+  font-size: clamp(1.06rem, 2.4vw, 1.2rem);
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.platforms {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin: 30px 0 0;
+}
+
+.platforms li {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 7px 17px;
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  padding-block: clamp(38px, 6vw, 62px);
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3.4vw, 1.85rem);
+  letter-spacing: -0.018em;
+  margin: 0 0 8px;
+}
+
+.section-lede {
+  color: var(--ink-soft);
+  max-width: var(--measure);
+  margin: 0 0 30px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.features li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.features h3 {
+  margin: 0 0 6px;
+  font-size: 1.06rem;
+}
+
+.features p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+
+.privacy-points {
+  max-width: var(--measure);
+  padding-left: 1.15em;
+  color: var(--ink-soft);
+}
+
+.privacy-points li + li {
+  margin-top: 8px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 22px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 999px;
+}
+
+.button:hover {
+  filter: brightness(1.08);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+  padding-block: 34px;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.site-footer p {
+  margin: 0 0 6px;
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+/* ---------- Policy pages ---------- */
+
+.policy {
+  padding-block: clamp(34px, 6vw, 56px);
+}
+
+.policy .shell {
+  max-width: calc(var(--measure) + 40px);
+}
+
+.policy h1 {
+  font-size: clamp(1.75rem, 4.6vw, 2.3rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+.policy h2 {
+  margin-top: 2em;
+  padding-top: 0.4em;
+  border-top: 1px solid var(--line);
+}
+
+.policy h3 {
+  margin-top: 1.6em;
+  font-size: 1.08rem;
+}
+
+.policy hr {
+  display: none; /* the h2 rules already separate sections */
+}
+
+.policy code {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-size: 0.92em;
+  /* Latin identifiers such as drive.file must stay LTR inside Arabic prose. */
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+.policy .meta {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  margin-bottom: 2em;
+}
+
+.policy ul {
+  padding-left: 1.15em;
+}
+
+.policy li + li {
+  margin-top: 6px;
+}
+
+.lang-switch {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+/* Right-to-left pages: mirror list indentation, which is the one thing the
+   logical properties above do not already handle. */
+[dir="rtl"] .policy ul,
+[dir="rtl"] .privacy-points {
+  padding-left: 0;
+  padding-right: 1.15em;
+}
+
+@media (max-width: 560px) {
+  .site-header .shell {
+    justify-content: center;
+  }
+
+  .site-nav {
+    gap: 18px;
+  }
+}
