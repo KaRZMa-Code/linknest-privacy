@@ -184,6 +184,17 @@ a:focus-visible,
   margin: 0 0 14px;
 }
 
+/* Sits between the app's name and the fuller description: the h1 is the name
+   alone, so this carries the one-line statement of what the name refers to. */
+.tagline {
+  font-size: clamp(1.12rem, 2.8vw, 1.35rem);
+  font-weight: 550;
+  color: var(--ink);
+  max-width: 46ch;
+  margin: 0 auto 18px;
+  line-height: 1.35;
+}
+
 .lede {
   font-size: clamp(1.06rem, 2.4vw, 1.2rem);
   color: var(--ink-soft);
