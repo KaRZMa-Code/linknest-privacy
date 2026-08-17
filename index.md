@@ -8,8 +8,8 @@ description: How LinkNest handles your data.
 **Publisher:** KaRZMa Code
 **Contact:** karzma.code@gmail.com
 **Applies to:** the LinkNest application for Android and Windows
-**Effective date:** _(set on the day this is published)_
-**Last updated:** _(set on the day this is published)_
+**Effective date:** August 17, 2026
+**Last updated:** August 17, 2026
 
 ---
 
